@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "lite-serer"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ramchaik/drag-and-drop/issues"
   },
-  "homepage": "https://github.com/ramchaik/drag-and-drop#readme"
+  "homepage": "https://github.com/ramchaik/drag-and-drop#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
