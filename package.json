@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "lite-serer"
+    "start": "lite-server"
   },
   "repository": {
     "type": "git",
