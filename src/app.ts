@@ -1,13 +1,13 @@
 // * Drag & Drop Interfaces
 interface Draggable {
-  dragStartEvent(event: DragEvent): void;
-  dragEndEvent(event: DragEvent): void;
+  dragStartHandler(event: DragEvent): void;
+  dragEndHandler(event: DragEvent): void;
 }
 
 interface DragTarget {
   dragOverHandler(event: DragEvent): void;
   dropHandler(event: DragEvent): void;
-  dragLeaveEvent(event: DragEvent): void;
+  dragLeaveHandler(event: DragEvent): void;
 }
 
 // * Project Type
@@ -192,18 +192,18 @@ class ProjectItem
   }
 
   @autobind
-  dragStartEvent(event: DragEvent) {
+  dragStartHandler(event: DragEvent) {
     console.log(event);
   }
 
   @autobind
-  dragEndEvent(_: DragEvent) {
+  dragEndHandler(_: DragEvent) {
     console.log("DragEnd");
   }
 
   configure() {
-    this.element.addEventListener("dragstart", this.dragStartEvent);
-    this.element.addEventListener("dragend", this.dragEndEvent);
+    this.element.addEventListener("dragstart", this.dragStartHandler);
+    this.element.addEventListener("dragend", this.dragEndHandler);
   }
 
   renderContent() {
