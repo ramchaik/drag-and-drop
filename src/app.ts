@@ -166,7 +166,6 @@ class ProjectItem extends Component<HTMLUListElement, HTMLLIElement> {
   constructor(hostId: string, project: Project) {
     super("single-project", hostId, false, project.id);
     this.project = project;
-    console.log('project :>> ', project);
 
     this.configure();
     this.renderContent();
