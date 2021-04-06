@@ -1,4 +1,4 @@
-import { autobind } from "../decorator/autobind.js";
+import { autobind as Autobind } from "../decorator/autobind.js";
 import { projectState } from "../state/project.js";
 import * as Validation from "../utils/validation.js";
 import { Component } from "./base-component.js";
@@ -66,7 +66,7 @@ export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
     return [enteredTitle, enteredDescription, +enteredPeople];
   }
 
-  @autobind
+  @Autobind
   private submitHandler(event: Event) {
     event.preventDefault();
     const userInput = this.gatherUserInput();
